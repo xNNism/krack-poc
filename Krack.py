@@ -190,10 +190,8 @@ class Logger():
         Example: This [G]word[/G] will be green
         '''
         msg = re.sub(r"\[([A-Z]+)\](.*?)\[/([A-Z]+)\]",
-                     lambda x: (self.colors.get(x.group(1), "")) + x.group(2) + msg_color, msg)
-
-        print '[' + symbol_color + symbol + self.colors['W'] + '] ' + msg_color + msg + self.colors['W']
-
+        lambda x: (self.colors.get(x.group(1), "")) + x.group(2) + msg_color, msg)
+        print('[' + symbol_color + symbol + self.colors['W'] + '] ' + msg_color + msg + self.colors['W'])
 
 class Jammer:
     def __init__(self, args):
